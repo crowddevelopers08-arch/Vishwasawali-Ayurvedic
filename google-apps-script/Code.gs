@@ -1,9 +1,9 @@
 /* ============================================================
-   Eclora Aesthetics - Google Apps Script (Client Feedback)
+   Google Apps Script (Client Feedback)
 
    Writes private feedback from the review funnel into one tab:
 
-   "Client Feedback"  <- app/api/feedback/route.ts  (1-3 star ratings from /review)
+   "Client Feedback"  <- app/api/feedback/route.ts  (1-3 star ratings from /)
         { type: 'feedback', timestamp, name, email, phone, rating, suggestions, source }
 
    Rows are written by header name instead of fixed column position so the
@@ -26,7 +26,7 @@ var FEEDBACK_WIDTHS = [170, 170, 220, 130, 90, 380, 260, 120];
 
 /**
  * Comma-separated addresses that get an email for every new feedback entry,
- * e.g. 'manager@ecloraaesthetics.com, owner@gmail.com'. Leave empty to turn
+ * e.g. 'manager@example.com, owner@gmail.com'. Leave empty to turn
  * the email off. Mail goes out from the Google account that deploys the script.
  */
 var FEEDBACK_NOTIFY_EMAILS = '';
@@ -36,7 +36,7 @@ var FEEDBACK_NOTIFY_EMAILS = '';
    ============================================================ */
 
 function doGet() {
-  return _json({ status: 'Eclora Aesthetics feedback API is live' });
+  return _json({ status: 'Feedback API is live' });
 }
 
 function doPost(e) {
@@ -170,7 +170,7 @@ function _notifyFeedback(data, ts) {
 
     MailApp.sendEmail({
       to: to,
-      subject: 'Eclora feedback (' + (data.rating || 'no rating') + ') - ' + (data.name || 'Client'),
+      subject: 'Client feedback (' + (data.rating || 'no rating') + ') - ' + (data.name || 'Client'),
       body: body,
       replyTo: data.email || undefined
     });

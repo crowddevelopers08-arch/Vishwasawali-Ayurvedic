@@ -11,7 +11,7 @@ type Status = { type: 'success' | 'error'; text: string } | null;
 const inputClass =
   'w-full rounded-xl border border-[var(--r-line)] bg-[var(--r-canvas)] px-4 py-2.5 text-[var(--r-ink)] transition-all duration-150 focus:border-[var(--r-deep)] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[var(--r-focus-ring)] disabled:cursor-not-allowed disabled:opacity-60';
 
-/** Private feedback form for 1–3 star ratings coming from /review. */
+/** Private feedback form for 1–3 star ratings coming from the review page. */
 export function ClientFeedbackForm() {
   const formRef = useRef<HTMLFormElement>(null);
   const [form, setForm] = useState(EMPTY);
@@ -61,7 +61,7 @@ export function ClientFeedbackForm() {
 
   return (
     <div className="review-shell flex min-h-screen flex-col items-center justify-center p-4 sm:p-6">
-      <img src={SITE.logo} alt={SITE.name} className="mt-4 h-auto w-[180px] sm:w-[220px]" />
+      <img src={SITE.logo} alt="Logo" className="mt-4 h-auto w-[180px] sm:w-[220px]" />
       <div className="mx-auto mb-6 mt-5 w-full max-w-[560px] rounded-[28px] bg-[var(--r-card)] p-5 shadow-[0_40px_80px_-40px_rgba(16,22,17,0.75)] sm:mt-6 sm:p-8">
         <div className="mb-6 text-center">
           <h1 className="text-[var(--r-ink)]">Help Us Improve</h1>
@@ -173,7 +173,7 @@ export function ClientFeedbackForm() {
           </button>
         </form>
 
-        <a href="/review" className="r-btn r-btn-ghost mt-3 w-full">
+        <a href="/" className="r-btn r-btn-ghost mt-3 w-full">
           <ArrowLeftIcon className="h-4 w-4" />
           Back
         </a>

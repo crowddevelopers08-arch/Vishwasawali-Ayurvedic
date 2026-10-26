@@ -14,8 +14,8 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  title: "Eclora Aesthetics | Share Your Review",
-  description: "Tell us about your experience at Eclora Aesthetics.",
+  title: "Share Your Review",
+  description: "Tell us about your experience with us.",
   robots: { index: false, follow: false },
   icons: {
     icon: [

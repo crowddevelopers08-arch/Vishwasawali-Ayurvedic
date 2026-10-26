@@ -63,7 +63,7 @@ function sendFeedbackToTeleCRM(data: FeedbackInput) {
     phone: data.phone,
     email: data.email,
     message: `Client feedback (${data.ratingLabel}): ${data.suggestions}`,
-    pageName: 'eclora-client-feedback',
+    pageName: 'client-feedback',
     notes: [
       `Lead Source: ${SOURCE}`,
       `Live URL: ${data.pageUrl || 'Not provided'}`,

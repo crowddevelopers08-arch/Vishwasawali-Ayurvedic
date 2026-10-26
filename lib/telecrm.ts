@@ -73,7 +73,7 @@ export async function sendToTeleCRM(lead: TeleCRMFeedbackLead) {
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${apiKey}`,
-        'X-Client-ID': 'eclora-aesthetics-website',
+        'X-Client-ID': 'review-funnel-website',
         Accept: 'application/json',
       },
       body: JSON.stringify(payload),
