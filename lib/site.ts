@@ -16,7 +16,7 @@ export const SITE = {
 } as const;
 
 /**
- * Review funnel (/ → Google for 4–5 stars, /client-feedback for 1–3).
+ * Review funnel (/review → Google for 4–5 stars, /client-feedback for 1–3).
  *
  * GOOGLE_REVIEW_URL is the "Ask for reviews" link from the clinic's Google
  * Business Profile (https://g.page/r/<id>/review). While it still holds a

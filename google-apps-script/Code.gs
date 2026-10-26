@@ -3,7 +3,7 @@
 
    Writes private feedback from the review funnel into one tab:
 
-   "Client Feedback"  <- app/api/feedback/route.ts  (1-3 star ratings from /)
+   "Client Feedback"  <- app/api/feedback/route.ts  (1-3 star ratings from /review)
         { type: 'feedback', timestamp, name, email, phone, rating, suggestions, source }
 
    Rows are written by header name instead of fixed column position so the
